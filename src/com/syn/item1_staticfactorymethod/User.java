@@ -1,4 +1,4 @@
-package com.syn.chapter2.item1_staticfactorymethod;
+package com.syn.item1_staticfactorymethod;
 
 import java.time.LocalTime;
 import java.util.logging.Level;
