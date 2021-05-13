@@ -1,4 +1,4 @@
-package com.syn.item8_finalizerscleaners;
+package com.syn.item8_finalizerscleaners.cleaner;
 
 import com.syn.item8_finalizerscleaners.cleaner.Room;
 
