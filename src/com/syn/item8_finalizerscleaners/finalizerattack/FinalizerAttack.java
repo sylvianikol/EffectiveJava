@@ -12,7 +12,7 @@ public class FinalizerAttack {
             System.out.println(e.getMessage());
         }
 
-        System.gc();
+        System.gc(); // increases the odds of finalizers or cleaners getting executed, but doesn't guarantee it
         TimeUnit.MINUTES.sleep(10);
     }
 }
