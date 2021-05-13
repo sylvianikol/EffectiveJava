@@ -1,4 +1,4 @@
-package com.syn.item3_singleton;
+package com.syn.item03_singleton;
 
 public class Elvis {
     // 1st way -> public field approach

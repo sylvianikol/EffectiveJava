@@ -1,4 +1,4 @@
-package com.syn.item4_privateconstructor;
+package com.syn.item04_privateconstructor;
 
 public class UtilityClass {
 

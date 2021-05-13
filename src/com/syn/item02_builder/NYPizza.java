@@ -1,4 +1,4 @@
-package com.syn.item2_builder;
+package com.syn.item02_builder;
 
 import java.util.Objects;
 

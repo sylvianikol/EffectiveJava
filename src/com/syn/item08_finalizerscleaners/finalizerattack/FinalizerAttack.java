@@ -1,4 +1,4 @@
-package com.syn.item8_finalizerscleaners.finalizerattack;
+package com.syn.item08_finalizerscleaners.finalizerattack;
 
 import java.util.concurrent.TimeUnit;
 

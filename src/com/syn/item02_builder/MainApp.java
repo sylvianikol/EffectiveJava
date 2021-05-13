@@ -1,8 +1,8 @@
-package com.syn.item2_builder;
+package com.syn.item02_builder;
 
 
-import static com.syn.item2_builder.NYPizza.Size.SMALL;
-import static com.syn.item2_builder.Pizza.Topping.*;
+import static com.syn.item02_builder.NYPizza.Size.SMALL;
+import static com.syn.item02_builder.Pizza.Topping.*;
 
 public class MainApp {
 

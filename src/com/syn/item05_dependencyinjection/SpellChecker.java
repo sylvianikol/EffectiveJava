@@ -1,4 +1,4 @@
-package com.syn.item5_dependencyinjection;
+package com.syn.item05_dependencyinjection;
 
 import java.util.Objects;
 

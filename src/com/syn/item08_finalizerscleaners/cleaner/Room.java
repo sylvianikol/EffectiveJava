@@ -1,4 +1,4 @@
-package com.syn.item8_finalizerscleaners.cleaner;
+package com.syn.item08_finalizerscleaners.cleaner;
 
 import java.lang.ref.Cleaner;
 
