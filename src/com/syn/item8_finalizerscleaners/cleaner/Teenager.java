@@ -5,5 +5,6 @@ public class Teenager {
 
         new Room(99);
         System.out.println("Peace out");
+//        System.gc();
     }
 }
