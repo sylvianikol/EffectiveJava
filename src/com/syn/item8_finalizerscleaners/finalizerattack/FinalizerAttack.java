@@ -6,10 +6,8 @@ public class FinalizerAttack {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Account account = null;
-
         try {
-            account = new FakeAccount();
+            VulnerableAccount account = new FakeAccount();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

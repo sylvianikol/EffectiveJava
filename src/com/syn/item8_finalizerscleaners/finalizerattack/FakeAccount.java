@@ -1,6 +1,6 @@
 package com.syn.item8_finalizerscleaners.finalizerattack;
 
-public class FakeAccount extends Account {
+public class FakeAccount extends VulnerableAccount {
 
     public FakeAccount() {
     }

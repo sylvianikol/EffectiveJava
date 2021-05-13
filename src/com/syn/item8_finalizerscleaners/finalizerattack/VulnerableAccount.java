@@ -1,8 +1,8 @@
 package com.syn.item8_finalizerscleaners.finalizerattack;
 
-public class Account { // declare class final to prevent it from being extended
+public class VulnerableAccount { // declare class final to prevent it from being extended
 
-    public Account() {
+    public VulnerableAccount() {
         if (!isAuthorized()) {
             throw new SecurityException("You are not authorized to access this account!");
         }
