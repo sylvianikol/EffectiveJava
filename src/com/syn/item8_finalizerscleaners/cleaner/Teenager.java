@@ -1,7 +1,5 @@
 package com.syn.item8_finalizerscleaners.cleaner;
 
-import com.syn.item8_finalizerscleaners.cleaner.Room;
-
 public class Teenager {
     public static void main(String[] args) {
 
