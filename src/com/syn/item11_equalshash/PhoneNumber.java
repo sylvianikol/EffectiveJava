@@ -8,7 +8,6 @@ public class PhoneNumber {
     private final short prefix;
     private final short lineNum;
 
-    // lazily initialized cached hash code
     private int hashCode;
 
     public PhoneNumber(short areaCode, short prefix, short lineNum) {
@@ -40,16 +39,30 @@ public class PhoneNumber {
     }
 
     // Typical hashCode method
-    @Override
-    public int hashCode() {
-        int result = Short.hashCode(areaCode);
-        result = 31 * result + Short.hashCode(prefix);
-        result = 31 * result + Short.hashCode(lineNum);
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        int result = Short.hashCode(areaCode);
+//        result = 31 * result + Short.hashCode(prefix);
+//        result = 31 * result + Short.hashCode(lineNum);
+//        return result;
+//    }
 
     // One-line hashCode method - mediocre performance
 //    @Override public int hashCode() {
 //        return Objects.hash(lineNum, prefix, areaCode);
 //    }
+
+    // hashCode method with lazily initialized cached hash code
+    @Override
+    public int hashCode() {
+        int result = hashCode;
+        if (result == 0) {
+            result = Short.hashCode(areaCode);
+            result = 31 * result + Short.hashCode(prefix);
+            result = 31 * result + Short.hashCode(lineNum);
+            hashCode = result;
+        }
+
+        return result;
+    }
 }
