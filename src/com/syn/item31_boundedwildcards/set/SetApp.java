@@ -3,6 +3,8 @@ package com.syn.item31_boundedwildcards.set;
 import java.util.HashSet;
 import java.util.Set;
 
+import static com.syn.item31_boundedwildcards.set.Union.union;
+
 public class SetApp {
 
     public static void main(String[] args) {
@@ -11,12 +13,12 @@ public class SetApp {
         Set<Double> doubles = Set.of(2.0, 4.0, 6.0);
         Set<Number> numbers = union(integers, doubles);
 
+        // Explicit type parameter - required prior to Java 8
+        Set<Number> numbersPriorJava8 = Union.<Number>union(integers, doubles);
+
         numbers.forEach(System.out::println);
+        System.out.println("-".repeat(10));
+        numbersPriorJava8.forEach(System.out::println);
     }
 
-    public static <E> Set<E> union(Set<? extends E> s1, Set<? extends E> s2) {
-        Set<E> result = new HashSet<>(s1);
-        result.addAll(s2);
-        return result;
-    }
 }
