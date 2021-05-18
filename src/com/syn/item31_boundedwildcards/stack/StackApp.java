@@ -1,4 +1,4 @@
-package com.syn.item31_boundedwildcards;
+package com.syn.item31_boundedwildcards.stack;
 
 import java.util.ArrayList;
 import java.util.Collection;
