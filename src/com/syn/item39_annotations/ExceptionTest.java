@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface ExceptionTest {
 
-    Class<? extends Throwable> value();
+    Class<? extends Exception>[] value();
 }

@@ -19,19 +19,19 @@ public class RunTests {
                 try {
                     method.invoke(null);
                     System.out.printf("Test %s failed: no exception%n", method);
-                } catch (InvocationTargetException wrappedEx) {
-                    Throwable exc = wrappedEx.getCause();
-                    Class<? extends Throwable> excType =
+                } catch (Throwable wrappedExc) {
+                    Throwable exc = wrappedExc.getCause();
+                    int oldPassed = passed;
+                    Class<? extends Exception>[] excTypes =
                             method.getAnnotation(ExceptionTest.class).value();
-                    if (excType.isInstance(exc)) {
-                        passed++;
-                    } else {
-                        System.out.printf(
-                                "Test %s failed: expected %s, got %s%n",
-                                method, excType.getName(), exc);
+                    for (Class<? extends Exception> excType : excTypes) {
+                        if (excType.isInstance(exc)) {
+                            passed++;
+                            break;
+                        }
                     }
-                } catch (Exception exc) {
-                    System.out.println("Invalid @Test: " + method);
+                    if (passed == oldPassed)
+                        System.out.printf("Test %s failed: %s %n", method, exc);
                 }
             }
         }
