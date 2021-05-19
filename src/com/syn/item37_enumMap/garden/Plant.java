@@ -1,4 +1,4 @@
-package com.syn.item34_enums.enumMap.garden;
+package com.syn.item37_enumMap.garden;
 
 public class Plant {
 
