@@ -1,8 +1,8 @@
-package com.syn.item34_enums.enumMap;
+package com.syn.item34_enums.enumMap.garden;
 
 import java.util.*;
 
-import static com.syn.item34_enums.enumMap.Plant.LifeCycle.*;
+import static com.syn.item34_enums.enumMap.garden.Plant.LifeCycle.*;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toSet;
 
