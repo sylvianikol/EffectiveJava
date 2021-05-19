@@ -3,17 +3,19 @@ package com.syn.item34_enums.enumMap;
 import java.util.*;
 
 import static com.syn.item34_enums.enumMap.Plant.LifeCycle.*;
+import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.toSet;
 
 public class GardenApp {
 
     public static void main(String[] args) {
 
-        List<Plant> garden = List.of(
+        Plant[] garden = {
                 new Plant("Rose", ANNUAL),
                 new Plant("Strawberry", ANNUAL),
                 new Plant("Daisy", PERENNIAL),
                 new Plant("Potato", BIENNIAL)
-        );
+        };
 
         Map<Plant.LifeCycle, Set<Plant>> plantsByLifeCycle =
                 new EnumMap<>(Plant.LifeCycle.class);
@@ -27,5 +29,10 @@ public class GardenApp {
         }
 
         System.out.println(plantsByLifeCycle);
+        System.out.println("-".repeat(10));
+
+        System.out.println(Arrays.stream(garden)
+                .collect(groupingBy(p -> p.lifeCycle,
+                        () -> new EnumMap<>(Plant.LifeCycle.class), toSet())));
     }
 }
