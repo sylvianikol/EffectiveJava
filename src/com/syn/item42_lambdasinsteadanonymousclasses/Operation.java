@@ -1,4 +1,4 @@
-package com.syn.item42_lambdas;
+package com.syn.item42_lambdasinsteadanonymousclasses;
 
 import java.util.function.DoubleBinaryOperator;
 
