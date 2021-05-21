@@ -16,7 +16,7 @@ public class Anagrams {
                 .collect(groupingBy(Anagrams::alphabetize))
                 .values().stream()
                 .filter(group -> group.size() >= minGroupSize)
-                .forEach(g -> System.out.println(g.size() + ": " + g));
+                .forEach(group -> System.out.println(group.size() + ": " + group));
 
         System.out.println("-".repeat(20));
 
