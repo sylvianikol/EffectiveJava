@@ -21,7 +21,7 @@ public class Deck {
                         .map(rank -> new Card(suit, rank)))
                 .collect(toList());
 
-        // classic approach
+        // classic iterative approach
 //        List<Card> result = new ArrayList<>();
 //        for (Suit suit : Suit.values()) {
 //            for (Rank rank : Rank.values()) {
