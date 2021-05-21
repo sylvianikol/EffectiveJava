@@ -1,4 +1,4 @@
-package com.syn.item45_streams;
+package com.syn.item45_streams.anagrams;
 
 import java.util.*;
 
